@@ -7,11 +7,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="python笔记print1print(*objects, sep&#x3D;&amp;#x27; &amp;#x27;, end&#x3D;&amp;#x27;\n&amp;#x27;, file&#x3D;sys.stdout, flush&#x3D;False)    tip: end 默认值 ‘\n’，即默认换行。 import 与 from…import在 python 用 import 或者 from…import 来导入相应的模块。 将整个模块(some">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/08/07/python%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="python笔记print1print(*objects, sep&#x3D;&amp;#x27; &amp;#x27;, end&#x3D;&amp;#x27;\n&amp;#x27;, file&#x3D;sys.stdout, flush&#x3D;False)    tip: end 默认值 ‘\n’，即默认换行。 import 与 from…import在 python 用 import 或者 from…import 来导入相应的模块。 将整个模块(some">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-07T03:40:33.487Z">
+<meta property="article:modified_time" content="2021-09-16T06:43:19.402Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,230 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-五、Nmap commands" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/16/%E4%BA%94%E3%80%81Nmap%20commands/" class="article-date">
-  <time datetime="2021-09-16T06:43:49.457Z" itemprop="datePublished">2021-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="五、Nmap-commands"><a href="#五、Nmap-commands" class="headerlink" title="五、Nmap commands"></a>五、Nmap commands</h1><p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903182932586.png" alt="image-20210903182932586"></p>
-<p>namp + 目标IP地址 ——&gt; 扫描指定IP地址的主机端口情况</p>
-<p><em><strong>PORT: 端口号   STATE: 端口状态   SERVICE: 端口服务</strong></em></p>
-<p><strong>open：端口开放      close：端口关闭     filtered：端口被防火墙IDS/IPS屏蔽，无法确定状态      unfiltered：端口未被屏蔽，但是否开放需要进一步确定       open|filtered：端口是开放或被过滤       close|filtered：端口是关闭或被过滤</strong></p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903184847791.png" alt="image-20210903184847791"></p>
-<p>-sS：使用 TCP SYN 扫描</p>
-<p>-sV：进行版本探测</p>
-<p>-T4：使用的是一种快速扫描的方式，扫描速度的级别范围（T0-T5），级别越高，扫描速度越快。</p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903194446593.png" alt="image-20210903194446593"></p>
-<p>-A：全面扫描</p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903195107752.png" alt="image-20210903195107752"></p>
-<p>nmap + 网络段IP地址 + 网络段字节数：扫描当前网络中的全部IP地址</p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903195408166.png" alt="image-20210903195408166"></p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903195529146.png" alt="image-20210903195529146"></p>
-<p>nmap + –top-ports 100 +IP地址：扫描最可能打开的100个端口</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/16/%E4%BA%94%E3%80%81Nmap%20commands/" data-id="cktmkhmpg0002rgud6pyxhtaz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-四、kali linux 的配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/16/%E5%9B%9B%E3%80%81kali%20linux%20%E7%9A%84%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2021-09-16T06:43:49.454Z" itemprop="datePublished">2021-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="四、kali-linux-的配置"><a href="#四、kali-linux-的配置" class="headerlink" title="四、kali linux 的配置"></a>四、kali linux 的配置</h1><p>略</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/16/%E5%9B%9B%E3%80%81kali%20linux%20%E7%9A%84%E9%85%8D%E7%BD%AE/" data-id="cktmkhmph0003rgudcq9u0qqf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-三、kail的安装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/16/%E4%B8%89%E3%80%81kail%E7%9A%84%E5%AE%89%E8%A3%85/" class="article-date">
-  <time datetime="2021-09-16T06:43:49.450Z" itemprop="datePublished">2021-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="三、kail的安装"><a href="#三、kail的安装" class="headerlink" title="三、kail的安装"></a>三、kail的安装</h1><p>略</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/16/%E4%B8%89%E3%80%81kail%E7%9A%84%E5%AE%89%E8%A3%85/" data-id="cktmkhmpb0000rgud0yn34d8a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-二" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/16/%E4%BA%8C/" class="article-date">
-  <time datetime="2021-09-16T06:43:49.447Z" itemprop="datePublished">2021-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="二"><a href="#二" class="headerlink" title="二"></a>二</h1><h2 id="1-渗透测试的概念"><a href="#1-渗透测试的概念" class="headerlink" title="1.渗透测试的概念"></a>1.渗透测试的概念</h2><p>通过<strong>模拟</strong>恶意黑客的攻击方法，同时也是<strong>在授权情况下</strong>对目标系统进行安全性测试和评测的<strong>过程</strong>。</p>
-<p>tip：渗透测试的重点是测试，是过程，而不是不计后果的攻击或测试防御。</p>
-<h2 id="2-渗透测试的七个过程"><a href="#2-渗透测试的七个过程" class="headerlink" title="2.渗透测试的七个过程"></a>2.渗透测试的七个过程</h2><p>①确定要渗透的目标，也就是选择要测试的目标网站。</p>
-<p>②收集目标网站的相关信息。</p>
-<p>③漏洞探测。</p>
-<p>④漏洞利用，找到对方系统的弱点后，进一步攻克对方系统，拿到目标系统的权限。</p>
-<p>⑤渗透目标内网的其他主机，把获得的目标机器权限当作跳板，进一步攻克内网其他主机。</p>
-<p>⑥验证漏洞与修复漏洞。</p>
-<p>⑦清楚渗透痕迹，撰写测试报告。</p>
-<h2 id="3-网站运行原理"><a href="#3-网站运行原理" class="headerlink" title="3.网站运行原理"></a>3.网站运行原理</h2><p>①网站搭建在服务器的操作系统</p>
-<p>②中间件</p>
-<p>③数据酷</p>
-<p>④代码编写</p>
-<p>⑤静态资源</p>
-<p><img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210903181648153.png" alt="image-20210903181648153"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/16/%E4%BA%8C/" data-id="cktmkhmpf0001rgud45r0gwlk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-数据库笔记第一章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="article-date">
-  <time datetime="2021-09-16T06:15:12.000Z" itemprop="datePublished">2021-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/">数据库笔记第一章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/" data-id="cktmjgzwo00007wud2ran1zaf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/15/hello-world/" class="article-date">
-  <time datetime="2021-09-15T11:54:04.509Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/hello-world/" data-id="cktlg9giq00005sud1xxodcbq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-python笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-python笔记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/08/07/python%E7%AC%94%E8%AE%B0/" class="article-date">
   <time datetime="2021-08-07T03:40:33.487Z" itemprop="datePublished">2021-08-07</time>
@@ -486,11 +267,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/15/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
+</article>
 
 </section>
         
