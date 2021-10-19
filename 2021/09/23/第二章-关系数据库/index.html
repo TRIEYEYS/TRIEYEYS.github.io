@@ -229,12 +229,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>865 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.3k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>8 Mins</span>
         </span>
     
     
@@ -304,7 +304,181 @@
 <p>④ 任意两个元组的候选码不能相同</p>
 <p>⑤ 行的顺序无所谓，行的次序可以任意交换</p>
 <p>⑥ 分量必须取原子值，这是规范条件中最基本的一条</p>
-<h3 id="2-1-2-关系模式"><a href="#2-1-2-关系模式" class="headerlink" title="2.1.2  关系模式"></a>2.1.2  关系模式</h3><h3 id="2-1-3-关系数据库"><a href="#2-1-3-关系数据库" class="headerlink" title="2.1.3  关系数据库"></a>2.1.3  关系数据库</h3><h3 id="2-1-4-关系模型的存储结构"><a href="#2-1-4-关系模型的存储结构" class="headerlink" title="2.1.4   关系模型的存储结构"></a>2.1.4   关系模型的存储结构</h3><h2 id="2-2-关系操作"><a href="#2-2-关系操作" class="headerlink" title="2.2  关系操作"></a>2.2  关系操作</h2><h2 id="2-3-关系的完整性"><a href="#2-3-关系的完整性" class="headerlink" title="2.3  关系的完整性"></a>2.3  关系的完整性</h2><h2 id="2-4-关系代数"><a href="#2-4-关系代数" class="headerlink" title="2.4  关系代数"></a>2.4  关系代数</h2><h2 id="2-5-关系演算"><a href="#2-5-关系演算" class="headerlink" title="2.5  *关系演算"></a>2.5  *关系演算</h2><h2 id="2-6-小结"><a href="#2-6-小结" class="headerlink" title="2.6  小结"></a>2.6  小结</h2>
+<h3 id="2-1-2-关系模式"><a href="#2-1-2-关系模式" class="headerlink" title="2.1.2  关系模式"></a>2.1.2  关系模式</h3><p>关系模型是<strong>型</strong></p>
+<p>关系是<strong>值</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/VRhMniLuxmbHYsQ.png"
+                      alt="image-20211010193811293"
+                ></p>
+<p>关系模式是<strong>对关系的描述</strong></p>
+<ul>
+<li>元组集合的结构（属性构成，属性来自的域，属性与域之间的映象关系）</li>
+<li>完整性约束条件</li>
+</ul>
+<p><strong>关系模式可以形式化地表示为：</strong> R（U，D，DOM，F）</p>
+<p>※ 其中R为关系名，U为组成该关系的属性名集合，D为U中属性所来自的域，DOM为属性向域的映像集合，F为属性间数据的依赖关系的集合。</p>
+<p>关系模式通常可以简记为：R（U）或R（A1，A2，A3……An）</p>
+<p>※ 其中An为属性名，域名及属性向域的映象常常直接说明为属性的类型、长度</p>
+<table>
+<thead>
+<tr>
+<th>关系模式</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对关系的描述</td>
+<td>关系模式在某一时刻的状态或内容</td>
+</tr>
+<tr>
+<td>静态的、稳定的</td>
+<td>动态的、随时间不断变化的</td>
+</tr>
+</tbody></table>
+<p>※ 关系模式和关系往往笼统称为关系，需通过上下文加以区别</p>
+<h3 id="2-1-3-关系数据库"><a href="#2-1-3-关系数据库" class="headerlink" title="2.1.3  关系数据库"></a>2.1.3  关系数据库</h3><p>在一个给定的应用领域中，所有关系的集合构成一个关系数据库</p>
+<p>关系数据库的<strong>型</strong>: 关系数据库模式，是对关系数据库的描述</p>
+<p>关系数据库的<strong>值</strong>: 关系模式在某一时刻对应的关系的集合，通常称为关系数据库</p>
+<h3 id="2-1-4-关系模型的存储结构"><a href="#2-1-4-关系模型的存储结构" class="headerlink" title="2.1.4   关系模型的存储结构"></a>2.1.4   关系模型的存储结构</h3><p>有的关系数据库管理系统中一个表对应一个操作系统文件，将物理数据组织交给操作系统完成</p>
+<p>有的关系数据库管理系统从操作系统那里申请若干个大的文件，自己划分文件空间，组织表、索引等存储结构，并进行存储管理</p>
+<h2 id="2-2-关系操作"><a href="#2-2-关系操作" class="headerlink" title="2.2  关系操作"></a>2.2  关系操作</h2><p>常见的关系操作：</p>
+<ul>
+<li><strong>查询操作</strong>：选择、投影、连接、除、并、差、交、笛卡尔积<em>（其中选择、投影、并、差、笛卡尔积是五种基本操作）</em></li>
+<li><strong>数据更新</strong>：插入、删除、修改</li>
+</ul>
+<p>关系操作的特点：</p>
+<p>集合操作方式：操作的对象和结果都是集合，一次一集合的方式。</p>
+<p>关系代数语言：用对关系的运算来表达查询要求（代表 ISBL）</p>
+<p>关系演算语言：用谓词来表达查询要求</p>
+<ul>
+<li>元组关系演算语言：谓词变元的基本对象是元组变量（代表 APLHA,QUEL）</li>
+<li>域关系演算语言：谓词变元的基本对象是域变量（代表 QBE）</li>
+</ul>
+<p>具有关系代数和关系演算双重特点的语言（代表 SQL）</p>
+<h2 id="2-3-关系的完整性"><a href="#2-3-关系的完整性" class="headerlink" title="2.3  关系的完整性"></a>2.3  关系的完整性</h2><h3 id="2-3-1-实体完整性"><a href="#2-3-1-实体完整性" class="headerlink" title="2.3.1 实体完整性"></a>2.3.1 实体完整性</h3><p>实体完整性规则（Entity Integrity）：若属性A是基本关系R的<strong>主属性</strong>，则属性A<strong>不能取空值</strong></p>
+<p>※ 空值就是“不知道”或“不存在”或“无意义”的值</p>
+<p><strong>实体完整性规则的说明</strong></p>
+<ol>
+<li>实体完整性规则是<strong>针对基本关系</strong>而言的。一个基本表通常对应现实世界的一个实体集。</li>
+<li>现实世界中的实体是可区分的，即它们具有某种<strong>唯一性标识</strong>。</li>
+<li>关系模型中以主码作为唯一性标识。</li>
+<li>主码中的属性即主属性不能取空值。主属性取空值，就说明存在某个不可标识的实体，即存在不可区分的实体，这与第（2）点相矛盾，因此这个规则称为实体完整性。</li>
+</ol>
+<h3 id="2-3-2-参照完整性"><a href="#2-3-2-参照完整性" class="headerlink" title="2.3.2 参照完整性"></a>2.3.2 参照完整性</h3><h4 id="1-关系间的引用"><a href="#1-关系间的引用" class="headerlink" title="1.关系间的引用"></a>1.关系间的引用</h4><p>在关系模型中实体及实体间的联系都是用关系来描述的，自然存在着关系与关系间的引用。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/ars6NcIZgBOPWRG.png"
+                      alt="image-20211011184941068"
+                ></p>
+<h4 id="2-外码"><a href="#2-外码" class="headerlink" title="2. 外码"></a>2. 外码</h4><p>设F是基本关系R的一个或一组属性，但<strong>不是关系R的码</strong>。如果F<strong>与基本关系S的主码Ks相对应</strong>，则称F是R的<strong>外码</strong></p>
+<p>基本关系R称为<strong>参照关系</strong>（Referencing  Relation）</p>
+<p>基本关系S称为<strong>被参照关系</strong>（Referenced Relation）或<strong>目标关系</strong>（Target Relation）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/OSFZD2JaLw5GQ8m.png"
+                      alt="image-20211011210324138"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/Iv5as8DN24gYLbV.png"
+                      alt="image-20211011210702624"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20211011211208113.png"
+                      alt="image-20211011211208113"
+                ></p>
+<p>关系R和S不一定是不同的关系</p>
+<p>目标关系S的主码Ks 和参照关系的外码F须定义在同一个（或一组）域上</p>
+<p>外码并不一定要与相应的主码同名<br>       当外码与相应的主码属于不同关系时，往往取相同的名 字，以便于识别</p>
+<h4 id="3-参考完整性规则"><a href="#3-参考完整性规则" class="headerlink" title="3.参考完整性规则"></a>3.参考完整性规则</h4><p>参考完整性规则：若属性（或属性组）F是<strong>基本关系R的外码</strong>，它与<strong>基本关系S的主码Ks相对应</strong>（基本关系R和S不一定是不同的关系），则对于R中每个元组在F上的值必须为：</p>
+<ul>
+<li>或者取空值（F的每个属性值均为空值）</li>
+<li>或者等于S中某个元组的主码值</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/FsTpQ8E1gxJi5nM.png"
+                      alt="image-20211011212237098"
+                ></p>
+<p><strong><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/h25qujNTQGRZdXi.png"
+                      alt="image-20211011212613454"
+                ></strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/B75XgDCAriaxeyI.png"
+                      alt="image-20211011212637898"
+                ></p>
+<h3 id="2-3-3-用户定义的完整性"><a href="#2-3-3-用户定义的完整性" class="headerlink" title="2.3.3 用户定义的完整性"></a>2.3.3 用户定义的完整性</h3><p>针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求</p>
+<p>关系模型应提供定义和检验这类完整性的机制，以便用统一的系统的方法处理它们，而不需由应用程序承担这一功能</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/dljIFOyL354aJHg.png"
+                      alt="image-20211011213233233"
+                ></p>
+<h2 id="2-4-关系代数"><a href="#2-4-关系代数" class="headerlink" title="2.4  关系代数"></a>2.4  关系代数</h2><p>关系代数是一种抽象的<strong>查询语言</strong>，它用对关系的运算来表达查询</p>
+<p>关系代数的<strong>运算对象是关系</strong>，<strong>运算结果亦为关系</strong></p>
+<p>关系代数的运算符有两类：<strong>集合运算符</strong>和<strong>专门的关系运算符</strong></p>
+<p>传统的集合运算是从关系的“水平”方向即行的角度进行</p>
+<p>专门的关系运算不仅涉及行而且涉及列</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/pyWYRroTLiuVekI.png"
+                      alt="image-20211011213950729"
+                ></p>
+<h3 id="2-4-1-传统的集合运算"><a href="#2-4-1-传统的集合运算" class="headerlink" title="2.4.1 传统的集合运算"></a>2.4.1 传统的集合运算</h3><h4 id="（1）并：略"><a href="#（1）并：略" class="headerlink" title="（1）并：略"></a>（1）并：略</h4><h4 id="（2）差：略"><a href="#（2）差：略" class="headerlink" title="（2）差：略"></a>（2）差：略</h4><h4 id="（3）交：略"><a href="#（3）交：略" class="headerlink" title="（3）交：略"></a>（3）交：略</h4><h4 id="（4）笛卡儿积："><a href="#（4）笛卡儿积：" class="headerlink" title="（4）笛卡儿积："></a>（4）笛卡儿积：</h4><p>严格地讲应该是广义的笛卡尔积（Extended Cartesian Product） </p>
+<p>R: n目关系，k1个元组，S: m目关系，k2个元组</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/M3HIEG4JneC9WPt.png"
+                      alt="image-20211011214738323"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/jpOV7TGBUAxzCDm.png"
+                      alt="image-20211011214921758"
+                ></p>
+<h3 id="2-4-2-专门的关系运算"><a href="#2-4-2-专门的关系运算" class="headerlink" title="2.4.2 专门的关系运算"></a>2.4.2 专门的关系运算</h3><p>先引入几个记号 </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/8nVmMLKgAzCfFOT.png"
+                      alt="image-20211011223403017"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/1HDvKCnz92Zx6Rd.png"
+                      alt="image-20211011223420529"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/jdsLF3TAanZR4QP.png"
+                      alt="image-20211011223439392"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.loli.net/2021/10/11/CWPnjEwGBtxukp1.png"
+                      alt="image-20211011223455138"
+                ></p>
+<h2 id="2-5-关系演算"><a href="#2-5-关系演算" class="headerlink" title="2.5  *关系演算"></a>2.5  *关系演算</h2><h2 id="2-6-小结"><a href="#2-6-小结" class="headerlink" title="2.6  小结"></a>2.6  小结</h2>
         </div>
 
         
@@ -442,7 +616,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8A%E5%BD%A2%E5%BC%8F%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">2.1  关系数据结构及形式化定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">2.1.1  关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%9F"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">2.笛卡尔积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">3.关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text">（1）关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%85%83%E7%BB%84"><span class="nav-number">1.1.1.3.2.</span> <span class="nav-text">（2）元组</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E5%8D%95%E5%85%83%E5%85%B3%E7%B3%BB%E4%B8%8E%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.2.1.</span> <span class="nav-text">（3）单元关系与二元关系</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E5%85%B3%E7%B3%BB%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.1.1.3.3.</span> <span class="nav-text">（4）关系的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.1.3.3.1.</span> <span class="nav-text">（5）属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%886%EF%BC%89%E7%A0%81"><span class="nav-number">1.1.1.3.4.</span> <span class="nav-text">（6）码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%887%EF%BC%89%E4%B8%89%E7%B1%BB%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.5.</span> <span class="nav-text">（7）三类关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%888%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.1.3.6.</span> <span class="nav-text">（8）基本关系的性质</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.1.2  关系模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.1.3  关系数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.1.4   关系模型的存储结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text">2.2  关系操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%85%B3%E7%B3%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.3.</span> <span class="nav-text">2.3  关系的完整性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">2.4  关系代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E5%85%B3%E7%B3%BB%E6%BC%94%E7%AE%97"><span class="nav-number">1.5.</span> <span class="nav-text">2.5  *关系演算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-%E5%B0%8F%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">2.6  小结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8A%E5%BD%A2%E5%BC%8F%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">2.1  关系数据结构及形式化定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">2.1.1  关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%9F"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">2.笛卡尔积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">3.关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text">（1）关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%85%83%E7%BB%84"><span class="nav-number">1.1.1.3.2.</span> <span class="nav-text">（2）元组</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E5%8D%95%E5%85%83%E5%85%B3%E7%B3%BB%E4%B8%8E%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.2.1.</span> <span class="nav-text">（3）单元关系与二元关系</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E5%85%B3%E7%B3%BB%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.1.1.3.3.</span> <span class="nav-text">（4）关系的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.1.3.3.1.</span> <span class="nav-text">（5）属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%886%EF%BC%89%E7%A0%81"><span class="nav-number">1.1.1.3.4.</span> <span class="nav-text">（6）码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%887%EF%BC%89%E4%B8%89%E7%B1%BB%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.1.3.5.</span> <span class="nav-text">（7）三类关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%888%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.1.3.6.</span> <span class="nav-text">（8）基本关系的性质</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.1.2  关系模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.1.3  关系数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.1.4   关系模型的存储结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text">2.2  关系操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%85%B3%E7%B3%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.3.</span> <span class="nav-text">2.3  关系的完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E5%AE%9E%E4%BD%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.3.1 实体完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.3.2 参照完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%85%B3%E7%B3%BB%E9%97%B4%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1.关系间的引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%A4%96%E7%A0%81"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">2. 外码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8F%82%E8%80%83%E5%AE%8C%E6%95%B4%E6%80%A7%E8%A7%84%E5%88%99"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3.参考完整性规则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.3.3.</span> <span class="nav-text">2.3.3 用户定义的完整性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">2.4  关系代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-%E4%BC%A0%E7%BB%9F%E7%9A%84%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97"><span class="nav-number">1.4.1.</span> <span class="nav-text">2.4.1 传统的集合运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%B9%B6%EF%BC%9A%E7%95%A5"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">（1）并：略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%B7%AE%EF%BC%9A%E7%95%A5"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">（2）差：略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%A4%EF%BC%9A%E7%95%A5"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">（3）交：略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E7%AC%9B%E5%8D%A1%E5%84%BF%E7%A7%AF%EF%BC%9A"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">（4）笛卡儿积：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-%E4%B8%93%E9%97%A8%E7%9A%84%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.4.2 专门的关系运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E5%85%B3%E7%B3%BB%E6%BC%94%E7%AE%97"><span class="nav-number">1.5.</span> <span class="nav-text">2.5  *关系演算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-%E5%B0%8F%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">2.6  小结</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
